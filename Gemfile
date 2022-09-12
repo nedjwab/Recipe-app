@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
 # Use pg as the database for Active Record
-gem "pg", "~> 1.1"
+gem 'pg', '~> 1.1'
 
 # rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
