@@ -25,10 +25,12 @@ h1 {
     justify-content: space-between;
     padding: 20px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .recipes-title {
     font-size: 23px;
     background-color: #E94560;
     margin-top: 19px;
+    text-decoration: none;
 }

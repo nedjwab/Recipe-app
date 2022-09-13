@@ -6,11 +6,11 @@
   <% @recipes.each do |recipe| %>
     <div class="recipes-container">
     <div class="recipes-card">
-    <p class="recipes-title"><%= recipe.name %></p>
+    <p class="recipes-title"><%= link_to recipe.name ,recipe %></p>
     <p class="recipes-description"><%= recipe.description %></p>
     </div>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New recipe", new_recipe_path %>
+
