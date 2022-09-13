@@ -20,8 +20,8 @@ class RecipeFoodsController < ApplicationController
   # POST /recipe_foods or /recipe_foods.json
   def create
     @recipe = Recipe.find(params[:recipe_id])
-
     @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
+
     respond_to do |format|
       if @recipe_food.save
         format.html { redirect_to recipe_path(@recipe), notice: 'Recipe food was successfully created.' }

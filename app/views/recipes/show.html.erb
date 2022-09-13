@@ -12,3 +12,46 @@
 </div>
 <%= link_to "Add ingredients", new_recipe_recipe_food_path(recipe_id: @recipe) %>
 
+<div id="recipe_foods">
+<table>
+    <th>
+      <p>
+      <strong>Food</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+    <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Value</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Actions</strong>
+      </p>
+    </th>
+  <% @recipe_foods.each do |recipe_food| %>
+      <tr>
+      <td>
+      <%=  recipe_food.food.name %>
+      </td>
+      <td>
+      <%= recipe_food.quantity%>
+      </td>
+      <td>
+      $<%= recipe_food.food.price*recipe_food.quantity %>
+      </td>
+
+      <td>
+      <%= button_to "Modify", method: :update %>
+      <%= button_to "Delete", method: :delete %>
+      </td>
+      </tr>
+  <% end %>
+  </table>
+</div>
+
