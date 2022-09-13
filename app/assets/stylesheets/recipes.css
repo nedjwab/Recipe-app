@@ -1,0 +1,34 @@
+
+.recipes-container {
+    display : flex ;
+    flex-direction: column;
+    gap :40px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    color: #E94560;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.recipes-card {
+    display: flex ;
+    flex-direction: row;
+    gap: 45px;
+    width :50%;
+    border: 4px solid black;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.recipes-title {
+    font-size: 23px;
+    background-color: #E94560;
+    margin-top: 19px;
+}

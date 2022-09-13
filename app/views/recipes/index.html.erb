@@ -1,13 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag "recipes.css" %>
 
-<h1>Recipes</h1>
+<h1><%=@user.name %> Recipes List</h1>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+    <div class="recipes-container">
+    <div class="recipes-card">
+    <p class="recipes-title"><%= recipe.name %></p>
+    <p class="recipes-description"><%= recipe.description %></p>
+    </div>
+    </div>
   <% end %>
 </div>
 
