@@ -16,7 +16,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  Max: 41
+  Max: 50
 
 Style/Documentation:
   Enabled: false
@@ -30,6 +30,7 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -48,3 +49,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+Layout/EndOfLine:
+  Enabled: False
