@@ -12,7 +12,7 @@ gem 'sprockets-rails'
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.1'
 
-#devise
+# devise
 gem 'devise'
 
 # rubocop
