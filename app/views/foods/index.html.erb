@@ -1,14 +1,56 @@
+<%= stylesheet_link_tag "food.css" %>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Foods</h1>
+<%= link_to "New food", new_food_path %>
 
 <div id="foods">
+<table>
+    <th>
+      <p>
+      <strong>Name</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+    <strong>Measurement unit</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Price</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Actions</strong>
+      </p>
+    </th>
   <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
+     <tr>
+      <td>
+      <%= food.name %>
+      </td>
+      <td>
+      <%= food.measurement_unit %>
+      </td>
+      <td>
+      <%= food.price %>
+      </td>
+      <td>
+      <%= food.quantity %>
+      </td>
+      <td>
+      <%= button_to "Delete", food, method: :delete %>
+      </td>
+      </tr>
   <% end %>
+    </table>
 </div>
 
-<%= link_to "New food", new_food_path %>
