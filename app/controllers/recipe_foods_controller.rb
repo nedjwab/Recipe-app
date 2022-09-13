@@ -24,7 +24,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
     respond_to do |format|
       if @recipe_food.save
-        format.html { redirect_to recipe_recipe_food_url(@recipe_food), notice: 'Recipe food was successfully created.' }
+        format.html { redirect_to recipe_path(@recipe), notice: 'Recipe food was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_food }
       else
         format.html { render :new, status: :unprocessable_entity }

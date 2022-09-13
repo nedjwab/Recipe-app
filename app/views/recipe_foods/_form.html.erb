@@ -18,7 +18,8 @@
 
   <div>
     <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+        <%= form.select :food_id, current_user.foods.collect {|food| [food.name, food.id]}, {include_blank: true}, class:"form-select", id:"foodSelect" %>
+
   </div>
 
   <div>
