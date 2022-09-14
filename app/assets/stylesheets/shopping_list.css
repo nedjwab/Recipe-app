@@ -1,0 +1,9 @@
+.total-values {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.total-value {
+  font-size: 22px;
+}
