@@ -9,9 +9,7 @@ Rails.application.routes.draw do
     resources :recipes, except: :update do
       resources :recipe_foods
     end
-end
+  end
 
-  
   resources :foods, except: :update
- 
 end
