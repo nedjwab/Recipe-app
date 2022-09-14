@@ -5,7 +5,7 @@
     <div class="recipes-container">
     <div class="recipes-card">
           <h3>
-            <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "recipes-title" %>
+            <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "recipes-title decoration" %>
           </h3>
           <h5>By: <%= recipe.user.name %>
           </h5>
