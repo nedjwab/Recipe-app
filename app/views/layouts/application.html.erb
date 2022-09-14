@@ -12,6 +12,8 @@
   <body>
     <header>
     <div class="logo">
+    <%= link_to "Public Recipes", recipes_index_path, :class => 'nav-link' %>
+    <%= link_to "Users", users_path, :class => 'nav-link' %>
     RecipeApp
     </div>
     <div class="elements">
@@ -19,6 +21,7 @@
     <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
     <button><%= link_to  "Recipes List", recipes_url ,class:"decoration"%></button>
     <button> <%= link_to  "Food List", destroy_user_session_path, method: :delete,class:"decoration" %></button>
+    <button> <%= link_to  "Public Recipes", destroy_user_session_path, method: :delete,class:"decoration" %></button>
     <% else %>
     <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
     <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
