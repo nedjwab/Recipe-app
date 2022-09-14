@@ -51,7 +51,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food was successfully destroyed.' }
+      format.html { redirect_to recipe_path, notice: 'Recipe food was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -60,7 +60,7 @@ class RecipeFoodsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe_food
-    @recipe_food = RecipeFood.find(params[:id])
+    @recipe_food = RecipeFood.find(params[:recipe_food_id])
   end
 
   # Only allow a list of trusted parameters through.

@@ -47,8 +47,8 @@
       </td>
 
       <td>
-      <%= button_to "Modify", method: :update %>
-      <%= button_to "Delete", method: :delete %>
+      <%= button_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe, id: recipe_food.id,recipe_food_id: recipe_food.id) %>
+      <%= button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe, recipe_food_id: recipe_food.id),method: :delete %>
       </td>
       </tr>
   <% end %>
