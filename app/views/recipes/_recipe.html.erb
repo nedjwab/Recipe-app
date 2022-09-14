@@ -2,13 +2,14 @@
   <h1>
     <%= recipe.name %>
   </h1>
-
+<p>Public
   <label class="switch">
   <% if recipe.public == true  %>
   <input type="checkbox" checked>
   <%end%>
   <span class="slider round"></span>
 </label>
+</p>
 
   <p>
     <strong>Preparation time:</strong>
