@@ -19,18 +19,8 @@ class RecipeFoodsController < ApplicationController
 
   # POST /recipe_foods or /recipe_foods.json
   def create
-    @recipe = Recipe.find(params[:recipe_id])
-    @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
-
-    respond_to do |format|
-      if @recipe_food.save
-        format.html { redirect_to recipe_path(@recipe), notice: 'Recipe food was successfully created.' }
-        format.json { render :show, status: :created, location: @recipe_food }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @recipe_food.errors, status: :unprocessable_entity }
-      end
-    end
+    @recipe_food = RecipeFood.new(recipe_id: params[:recipe_id], food_id: params[:food_id], quantity: params[:quantity])
+    @recipe_food.save
   end
 
   # PATCH/PUT /recipe_foods/1 or /recipe_foods/1.json
