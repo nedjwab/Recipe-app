@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -15,20 +14,28 @@
     <p>
     RecipeApp
     </p>
+    <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%= link_to "Recipes List", recipes_url %>
+    <%= link_to "Food List", destroy_user_session_path, method: :delete %>
+    <% else %>
     <a href="#">
     Sign in
     </a>
-    <%= link_to "logout", destroy_user_session_path, method: :delete %>
     <a href="#">
     Login
     </a>
+    <a href="#">
+    Public Recipes
+    </a>
+    <% end %>
     </header>
     <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
+    <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
     <%= yield %>
   </body>
 </html>
