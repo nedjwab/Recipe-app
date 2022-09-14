@@ -1,19 +1,23 @@
+<%= stylesheet_link_tag "shopping_list.css" %>
+
 <h1>Shopping List</h1>
-<h2>Amount of food items to buy: <%= @recipe_foods.count %></h2>
-<h2>Total value of food needed: $<%= @total_price %></h2>
+<div class="total-values">
+<p class="total-value">Amount of food items to buy: <strong><%= @recipe_foods.count %></strong></p>
+<p class="total-value">Total value of food needed: <strong>$<%= @total_price %></strong></p>
+</div>
 <table>
 <thead>
-<td>Food</td>
-<td>Quantity</td>
-<td>Price</td>
+<td><strong>Food</strong></td>
+<td><strong>Quantity</strong></td>
+<td><strong>Price</strong></td>
 </thead>
 <tbody id="shop">
 
 <% @recipe_foods.each do |food| %>
 <tr>
 <td><%= food.food.name %></td>
-<td><%= food.quantity %></td>
-<td id="price" ><%= food.food.price*food.quantity %></td>
+<td><%= food.quantity %><%= food.food.measurement_unit %></td>
+<td id="price" >$<%= food.food.price*food.quantity %></td>
 </tr>
 <%end%>
 </tbody>

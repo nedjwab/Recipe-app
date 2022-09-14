@@ -10,8 +10,8 @@ class ShoppingListController < ApplicationController
         @recipe_foods << food
       end
     end
-    @recipe_foods.each do |rf|
-      @total_price += rf.food.price * rf.quantity
+    @recipe_foods.each do |f|
+      @total_price += f.food.price * f.quantity
     end
   end
 end
