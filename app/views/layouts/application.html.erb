@@ -20,6 +20,7 @@
       <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
       <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
       <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
+      <button> <%= link_to "Add Recipe", new_user_recipe_path,class:"decoration" %></button>
     <% else %>
       <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
       <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
