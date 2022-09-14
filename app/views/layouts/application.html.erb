@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <header>
-    <p>
+    <div class="logo">
     RecipeApp
-    </p>
-    <a href="#">
-    Sign in
-    </a>
-    <%= link_to "logout", destroy_user_session_path, method: :delete %>
-    <a href="#">
-    Login
-    </a>
+    </div>
+    <div class="elements">
+    <% if user_signed_in? %>
+      <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
+      <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
+      <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
+      <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
+    <% else %>
+      <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
+      <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
+      <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
+    <% end %>
     </header>
     <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
+    <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
     <%= yield %>
   </body>
 </html>
