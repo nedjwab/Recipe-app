@@ -33,3 +33,25 @@ h1 {
   margin-top: 19px;
   text-decoration: none;
 }
+
+.recipes-header {
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recipes-header-title {
+  text-align: center;
+  position: relative;
+  right: 11%;
+}
+
+.add-recipe {
+  padding :10px;
+  margin-top: 40px;
+  position: relative;
+  left: 11%;
+  font-size: 20px;
+}

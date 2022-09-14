@@ -1,6 +1,9 @@
 <%= stylesheet_link_tag "recipes.css" %>
 
-<h1><%=@user.name %> Recipes List</h1>
+<div class="recipes-header">
+<h1 class="recipes-header-title"><%=@user.name %> Recipes List</h1>
+<button class="add-recipe"><%= link_to "Add a new recipe",  new_user_recipe_url ,class:"decoration"  %></button>
+</div>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
@@ -10,6 +13,9 @@
     <p class="recipes-description"><%= recipe.description %></p>
     </div>
     </div>
+  <% end %>
+  <% if @recipes.empty? %>
+  <p>oops there are no recipes to show</p>
   <% end %>
 </div>
 
