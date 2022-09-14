@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :recipes, except: :update do
     resources :recipe_foods
   end
-
+  resources :shopping_list
   resources :foods, except: :update
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
