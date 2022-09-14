@@ -6,7 +6,7 @@
   <% @recipes.each do |recipe| %>
     <div class="recipes-container">
     <div class="recipes-card">
-    <p class="recipes-title"><%= link_to recipe.name , recipes_index_path %></p>
+    <p class="recipes-title"><%= link_to recipe.name ,user_recipe_url(@user,recipe) %></p>
     <p class="recipes-description"><%= recipe.description %></p>
     </div>
     </div>
