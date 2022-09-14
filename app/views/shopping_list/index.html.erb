@@ -1,1 +1,22 @@
 <h1>Shopping List</h1>
+<h2>Amount of food items to buy: <%= @recipes.count %></h2>
+<h2>Total value of food needed: $<%= @recipes.count %></h2>
+<table>
+<thead>
+<td>Food</td>
+<td>Quantity</td>
+<td>Price</td>
+</thead>
+<tbody id="shop">
+
+<%@allrecipes.each do |recipe| %>
+<% recipe.recipe_foods.each do |ing| %>
+<tr>
+<td><%= ing.food.name %></td>
+<td><%= ing.quantity %></td>
+<td id="price" ><%= ing.food.price*ing.quantity %></td>
+</tr>
+<%end%>
+<%end%>
+</tbody>
+</table>
