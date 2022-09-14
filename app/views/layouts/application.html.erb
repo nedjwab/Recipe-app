@@ -11,23 +11,18 @@
 
   <body>
     <header>
-    <p>
+    <div class="logo">
     RecipeApp
-    </p>
+    </div>
+    <div class="elements">
     <% if user_signed_in? %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <%= link_to "Recipes List", recipes_url %>
-    <%= link_to "Food List", destroy_user_session_path, method: :delete %>
+    <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
+    <button><%= link_to  "Recipes List", recipes_url ,class:"decoration"%></button>
+    <button> <%= link_to  "Food List", destroy_user_session_path, method: :delete,class:"decoration" %></button>
     <% else %>
-    <a href="#">
-    Sign in
-    </a>
-    <a href="#">
-    Login
-    </a>
-    <a href="#">
-    Public Recipes
-    </a>
+    <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
+    <button><%= link_to "Login in", new_user_session_path,class:"decoration" %></button>
+    <button> <%= link_to  "Public Recipes", destroy_user_session_path, method: :delete,class:"decoration" %></button>
     <% end %>
     </header>
     <% if notice %>
