@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "recipe_details.css" %>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @recipe %>
@@ -8,3 +10,48 @@
 
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 </div>
+<%= link_to "Add ingredients", new_recipe_recipe_food_path(recipe_id: @recipe) %>
+<hr>
+<div id="recipe_foods">
+<table>
+    <th>
+      <p>
+      <strong>Food</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+    <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Value</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Actions</strong>
+      </p>
+    </th>
+  <% @recipe_foods.each do |recipe_food| %>
+      <tr>
+      <td>
+      <%=  recipe_food.food.name %>
+      </td>
+      <td>
+      <%= recipe_food.quantity%>
+      </td>
+      <td>
+      $<%= recipe_food.food.price*recipe_food.quantity %>
+      </td>
+
+      <td>
+      <%= button_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe, id: recipe_food.id,recipe_food_id: recipe_food.id) %>
+      <%= button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe, recipe_food_id: recipe_food.id),method: :delete %>
+      </td>
+      </tr>
+  <% end %>
+  </table>
+</div>
+

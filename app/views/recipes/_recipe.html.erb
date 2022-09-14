@@ -1,8 +1,15 @@
 <div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
+  <h1>
     <%= recipe.name %>
-  </p>
+  </h1>
+<p>Public
+  <label class="switch">
+  <% if recipe.public == true  %>
+  <input type="checkbox" checked>
+  <%end%>
+  <span class="slider round"></span>
+</label>
+</p>
 
   <p>
     <strong>Preparation time:</strong>
@@ -23,6 +30,7 @@
     <strong>Public:</strong>
     <%= recipe.public %>
   </p>
+
 
   <p>
     <strong>User:</strong>
