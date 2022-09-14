@@ -18,7 +18,7 @@
     <% if user_signed_in? %>
       <button><%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %></button>
       <button><%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%></button>
-      <button> <%= link_to  "Food List", destroy_user_session_path, method: :delete,class:"decoration" %></button>
+      <button> <%= link_to  "Food List", foods_url,class:"decoration" %></button>
       <button> <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %></button>
     <% else %>
       <button><%= link_to  "Sign up", new_user_registration_path,class:"decoration" %></button>
