@@ -9,7 +9,10 @@
   <% @recipes.each do |recipe| %>
     <div class="recipes-container">
     <div class="recipes-card">
+    <div class="destroy">
     <p class="recipes-title"><%= link_to recipe.name ,user_recipe_url(@user,recipe),class: "decoration" %></p>
+    <%= button_to "Destroy this recipe", recipes_index_path, method: :delete %>
+    </div>
     <p class="recipes-description"><%= recipe.description %></p>
     </div>
     </div>
