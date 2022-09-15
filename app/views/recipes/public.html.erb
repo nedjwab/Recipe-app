@@ -16,6 +16,9 @@
           <% sum += food.food.price %>
           <% end %>
           <%= sum %></h5>
+          <% if can? :manage, recipe %>
+          <%= button_to "Delete" , user_recipe_path(recipe.user, recipe.id), method: :delete %>
+          <% end %>
         </div>
       </div>
   </div>
