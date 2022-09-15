@@ -14,8 +14,14 @@
  *= require_self
  */
 
+.main-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   gap: 120px;
   padding: 30px;
@@ -30,8 +36,6 @@ header {
 .elements {
   display: flex;
   flex-direction: row;
-  position: relative;
-  left: 52%;
   text-decoration: none;
   gap: 20px;
   margin-top: 2px;

@@ -1,7 +1,7 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -14,4 +14,17 @@ th {
 
 tr:nth-child(even) {
   background-color: #ddd;
+}
+
+.add-food-btn {
+  display: flex;
+  justify-content: right;
+}
+
+.add-food-btn > * {
+  text-decoration: none;
+  font-size: 26px;
+  color: white;
+  background-color: #e94560;
+  padding: 10px;
 }
