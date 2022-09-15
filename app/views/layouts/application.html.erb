@@ -16,16 +16,16 @@
     </div>
     <div class="elements">
     <% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %>
       <%= link_to  "Recipes List",  user_recipes_path(current_user.id) ,class:"decoration"%>
       <%= link_to  "Food List", foods_url,class:"decoration" %>
       <%= link_to  "Shopping List", shopping_list_index_path	,class:"decoration" %>
       <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %>
       <%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id),class:"decoration" %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %>
     <% else %>
+      <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %>
       <%= link_to  "Sign up", new_user_registration_path,class:"decoration" %>
       <%= link_to "Login", new_user_session_path,class:"decoration" %>
-      <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %>
     <% end %>
     </div>
     </header>
