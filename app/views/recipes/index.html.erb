@@ -9,11 +9,13 @@
   <% @recipes.each do |recipe| %>
     <div class="recipes-container">
     <div class="recipes-card">
-    <p class="recipes-title"><%= link_to recipe.name ,user_recipe_url(@user,recipe) %></p>
-    <p class="recipes-description"><%= recipe.description %></p>
+    <div class="recipe-informations">
+    <h3><%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "recipes-title" %></h3>
     <% if can? :manage, recipe %>
     <%= button_to "Delete" , user_recipe_path(recipe.user, recipe.id), method: :delete %>
     <% end %>
+    </div>
+    <p class="recipes-description"><%= recipe.description %></p>
     </div>
     </div>
   <% end %>
