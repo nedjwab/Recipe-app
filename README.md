@@ -1,9 +1,9 @@
-## Blog on Rails
+## 🍓 Strawberry Gem
 
-> Blog on Rails is a classic example of a blog website. You can show the list of posts and empower readers to interact with them by adding comments and liking posts.
+> The Strawberry Gem app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## Schema
-![](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd.png)
+![](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd_2_members.png)
 
 ## Built With
 
@@ -12,15 +12,16 @@
 -  PostgreSQL
 
 ## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-1- Copy this link `https://github.com/huseyinbiyik/blog-on-rails.git` <br>
-2- Get the directory that you want to clone the repository. <br>
-3- Open the command prompt in this directory. <br>
-4- Write `git clone https://github.com/huseyinbiyik/blog-on-rails.git` <br>
-5- Go to the repository folder in your command prompt `cd blog-on-rails`. <br>
-6- Go to command line and run `rails s`.
+- To setup the project First clone this repo using the git command line  :
+> https://github.com/nedjwab/Strawberry-Gem.git
+- Then you install the depencies
+> bundle install
+- setup the database
+> rails db:create
+> rails db:migrate
+> rails db:seed
+- Finally run the app
+> rails s
 
 To setup linters on your local environment, please follow these steps.
 
@@ -31,7 +32,13 @@ To setup linters on your local environment, please follow these steps.
 
 IDE(VSCode etc.), WSL(for Windows OS), for linters RuboCop
 
-## Author
+## Authors
+
+👤 **Nedjwa Bouraiou**
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
 👤 **Huseyin Biyik**
 
