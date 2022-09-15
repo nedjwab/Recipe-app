@@ -75,3 +75,11 @@ input:checked + .slider::before {
   display: flex;
   justify-content: space-between;
 }
+
+.recipe-detail-menu > * {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background-color: #e94560;
+  padding: 10px;
+}
