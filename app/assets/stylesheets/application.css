@@ -24,7 +24,8 @@ header {
   justify-content: space-between;
   flex-direction: row;
   gap: 120px;
-  padding: 30px;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .logo {
