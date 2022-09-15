@@ -15,7 +15,7 @@ gem 'pg', '~> 1.1'
 # devise
 gem 'devise'
 
-#cancancan
+# cancancan
 gem 'cancancan'
 
 # rubocop
