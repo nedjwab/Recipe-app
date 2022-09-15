@@ -22,6 +22,8 @@
 > rails db:seed
 - Finally run the app
 > rails s
+- To test the all specs
+> rspec
 
 To setup linters on your local environment, please follow these steps.
 
