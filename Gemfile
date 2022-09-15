@@ -12,8 +12,8 @@ gem 'sprockets-rails'
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.1'
 
-#gem "ffi"
-gem "ffi"
+# gem "ffi"
+gem 'ffi'
 
 # devise
 gem 'devise'
