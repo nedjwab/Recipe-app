@@ -3,6 +3,9 @@
 <h1><%=@user.name %> Recipes List</h1>
 
 <div id="recipes">
+  <% if @recipes.empty? %>
+     <h1>There are no recipes to show ! Try to Add one</h1>
+  <% end %>
   <% @recipes.each do |recipe| %>
     <div class="recipes-container">
     <div class="recipes-card">

@@ -28,8 +28,10 @@ h1 {
 }
 
 .recipes-title {
+  text-decoration: none;
   font-size: 23px;
   background-color: #e94560;
   margin-top: 19px;
-  text-decoration: none;
 }
+
+
