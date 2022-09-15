@@ -7,9 +7,6 @@
 <div class="recipe-detail-menu">
 <%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
 <%= link_to "Generate Shopping List", shopping_list_index_path%>
-<% if can? :destroy, @recipe %>
-<%=link_to "Delete This Recipe" , user_recipe_path(@recipe.user, @recipe.id), method: :delete %>
-<% end %>
 </div>
 <hr>
 <div id="recipe_foods">
