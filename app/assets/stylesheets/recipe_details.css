@@ -57,3 +57,21 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+.recipe-detail-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch-text {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: bold;
+}
+
+.recipe-detail-menu {
+  display: flex;
+  justify-content: space-between;
+}

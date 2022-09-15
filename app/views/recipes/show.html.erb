@@ -4,11 +4,11 @@
 
 <%= render @recipe %>
 
-<div>
-
-  <%= button_to "Destroy this recipe", recipes_index_path, method: :delete %>
+<div class="recipe-detail-menu">
+<%= button_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
+<%= button_to "Generate Shopping List", shopping_list_index_path%>
+<%= button_to "Delete This Recipe", recipes_index_path, method: :delete %>
 </div>
-<%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
 <hr>
 <div id="recipe_foods">
 <table>
