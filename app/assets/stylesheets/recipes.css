@@ -24,7 +24,7 @@ h1 {
   font-size: 23px;
   align-items: center;
   border: 1px solid black;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 24px;
   margin-bottom: 50px;
   cursor: pointer;
@@ -32,7 +32,7 @@ h1 {
 
 .recipes-card:hover {
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
 
 .recipes-title {
@@ -43,21 +43,20 @@ h1 {
 
 .recipe-informations {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   margin-left: 19px;
 }
 
 span {
-  color:#e94560;
+  color: #e94560;
 }
 
 .price {
-  position:relative;
-  bottom:18px;
+  position: relative;
+  bottom: 18px;
 }
 
 .d-btn {
-  position:relative;
-  bottom:18px;
-
+  position: relative;
+  bottom: 18px;
 }
