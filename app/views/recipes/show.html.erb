@@ -7,7 +7,6 @@
 <div class="recipe-detail-menu">
 <%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
 <%= link_to "Generate Shopping List", shopping_list_index_path%>
-<%= link_to "Delete This Recipe", recipes_index_path, method: :delete %>
 </div>
 <hr>
 <div id="recipe_foods">
@@ -45,7 +44,9 @@
       </td>
 
       <td>
-      <%= button_to "Delete", user_recipe_recipe_food_path(recipe_food_id: recipe_food.id, recipe_id: @recipe.id), method: :delete %>
+      <% if can? :manage, @recipe %>
+      <%= button_to "Delete" , user_recipe_path(@recipe.user, @recipe.id), method: :delete %>
+      <% end %>
       </td>
       </tr>
   <% end %>
