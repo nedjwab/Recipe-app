@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RecipeApp</title>
+    <title>Strawberry Gem</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,7 +12,7 @@
   <body>
     <header>
     <div class="logo">
-    RecipeApp
+    Strawberry Gem
     </div>
     <div class="elements">
     <% if user_signed_in? %>
@@ -21,6 +21,7 @@
       <%= link_to  "Shopping List", shopping_list_index_path	,class:"decoration" %>
       <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %>
       <%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id),class:"decoration" %>
+      <%= link_to "Add food", new_food_path %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"decoration" %>
     <% else %>
       <%= link_to "Public Recipes", recipes_index_path,class:"decoration" %>

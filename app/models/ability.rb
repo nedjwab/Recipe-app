@@ -6,6 +6,7 @@ class Ability
 
     can :manage, Recipe, user_id: user.id
     can :manage, Food, user_id: user.id
+    can :manage, User
 
     # Define abilities for the user here. For example:
     #

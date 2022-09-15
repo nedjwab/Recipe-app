@@ -10,26 +10,53 @@
 h1 {
   color: #e94560;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 83px;
 }
 
 .recipes-card {
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
+  border-radius: 23px;
   gap: 45px;
   width: 50%;
-  border: 4px solid black;
   font-weight: 600;
+  font-size: 23px;
   align-items: center;
+  border: 1px solid black;
   justify-content: space-between;
-  padding: 20px;
+  padding: 24px;
   margin-bottom: 50px;
   cursor: pointer;
+}
+
+.recipes-card:hover {
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
 
 .recipes-title {
   text-decoration: none;
   font-size: 23px;
-  background-color: #e94560;
-  margin-top: 19px;
+  color: black;
+}
+
+.recipe-informations {
+  display: flex;
+  flex-direction: column;
+  margin-left: 19px;
+}
+
+span {
+  color: #e94560;
+}
+
+.price {
+  position: relative;
+  bottom: 18px;
+}
+
+.d-btn {
+  position: relative;
+  bottom: 18px;
 }
