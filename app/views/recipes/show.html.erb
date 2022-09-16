@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag "recipe_details.css" %>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @recipe %>
+
+<div class="recipe-detail-menu">
+<%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
+<%= link_to "Generate Shopping List", shopping_list_index_path%>
+</div>
+<hr>
+<div id="recipe_foods">
+<table>
+    <th>
+      <p>
+      <strong>Food</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+    <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Value</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Actions</strong>
+      </p>
+    </th>
+  <% @recipe_foods.each do |recipe_food| %>
+      <tr>
+      <td>
+      <%=  recipe_food.food.name %>
+      </td>
+      <td>
+      <%= recipe_food.quantity%>
+      </td>
+      <td>
+      $<%= recipe_food.food.price*recipe_food.quantity %>
+      </td>
+
+      <td>
+      <% if can? :manage, @recipe %>
+      <%= button_to "Delete" , user_recipe_path(@recipe.user, @recipe.id), method: :delete %>
+      <% end %>
+      </td>
+      </tr>
+  <% end %>
+  </table>
+</div>
+

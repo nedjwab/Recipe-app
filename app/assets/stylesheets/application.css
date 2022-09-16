@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.main-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 120px;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.logo {
+  font-size: 30px;
+  color: #e94560;
+  margin-left: 9px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 20px;
+  margin-top: 2px;
+}
+
+button {
+  background-color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e94560;
+  color: white;
+}
+
+.decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.elements > * {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+}
+
+.elements > *:hover {
+  color: white;
+  background-color: #e94560;
+}

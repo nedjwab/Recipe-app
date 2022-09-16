@@ -1,0 +1,32 @@
+<div class="wrapper">
+
+  <h1>Public Recipe List</h1>
+  <% @public_recipes.each do |recipe| %>
+    <div class="recipes-container">
+    <div class="recipes-card">
+        <div class="recipe-informations">
+          <h3>
+            <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "recipes-title" %>
+          </h3>
+          <h5> By:<span><%= recipe.user.name %></h5></span> 
+          </div>
+         <div class="price">
+          <h5>Total foods: <%= recipe.recipe_foods.length %> </h5>
+          <% sum = 0 %>
+          <h5>Total price : $ <% recipe.recipe_foods.each do |food| %>
+          <% sum += food.food.price %>
+          <% end %>
+          <%= sum %></h5>
+        </div>
+        <div class="d-btn">
+        <% if can? :manage, recipe %>
+        <%= button_to "Delete" , user_recipe_path(recipe.user, recipe.id), method: :delete %>
+        <% end %>
+        </div>
+      </div>
+  </div>
+  <% end %>
+  <% if @public_recipes.empty? %>
+    <h1>There are no public recipes to show</h1>
+  <% end %>
+</div>
